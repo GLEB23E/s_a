@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:s_a/main_screen.dart';
-import 'package:logger/logger.dart';
 import 'package:s_a/questions.dart';
 
 import 'package:s_a/results.dart';
@@ -15,7 +14,6 @@ class Quiz extends StatefulWidget {
 }
 
 class _QuisState extends State<Quiz> {
-  final logger = Logger();
   var activeScreen = 'start-screen';
   List<String> selectedanswers = [];
   @override
@@ -38,7 +36,6 @@ class _QuisState extends State<Quiz> {
 
   void ssScreen2(String answer) {
     selectedanswers.add(answer);
-    logger.i(selectedanswers);
   }
 
   @override
